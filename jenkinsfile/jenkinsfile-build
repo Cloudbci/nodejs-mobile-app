@@ -1,6 +1,10 @@
 pipeline {
     agent any
-    tools {nodejs "node"}
+    tools {
+        nodejs 'node'
+        jfrog 'jfrog-cli'
+        }
+    
 
     stages {
         stage('Build') {
