@@ -16,7 +16,7 @@ pipeline {
 			steps {
 				dir('npm-example') {
 					// Configure npm project's repositories
-					jf 'npm-config --repo-resolve npm --repo-deploy npm'
+					jf 'npm-config --repo-resolve nodejs-npm --repo-deploy nodejs-npm'
 
 					// Install dependencies
 					jf 'npm install'
