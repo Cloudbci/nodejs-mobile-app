@@ -31,7 +31,7 @@ pipeline {
 		}
 	stage('Fetch Vulnerability report from JFrog XRay scanner'){
 			steps{
-				jfrog rt xr get vulnerabilities myapp
+				jf 'rt xr get vulnerabilities myapp'
 			}
 		}
     }
