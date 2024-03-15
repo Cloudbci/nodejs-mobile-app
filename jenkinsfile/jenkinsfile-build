@@ -32,6 +32,7 @@ pipeline {
 	stage('Vulnerability Scan') {
             steps {
                 // Run vulnerability scanner
+		sh 'chmod +x ./jenkinsfile/run_vulnerability_scanner.sh'
                 sh './jenkinsfile/run_vulnerability_scanner.sh' // Command to run the scanner
             }
         }
