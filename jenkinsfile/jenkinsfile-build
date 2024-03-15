@@ -29,5 +29,10 @@ pipeline {
 				jf 'rt build-publish'
 			}
 		}
+	stage('Fetch Vulnerability report from JFrog XRay scanner'){
+			steps{
+				jfrog rt xr get vulnerabilities my-npm-package
+			}
+		}
     }
 }
