@@ -29,11 +29,11 @@ pipeline {
 				jf 'rt build-publish'
 			}
 		}
-	stage('Fetch Vulnerability report from JFrog XRay scanner'){
-			steps{
-				jf s "*.tgz"
-				//jf 'rt xr get vulnerabilities myapp'
-			}
-		}
+	stage('Vulnerability Scan') {
+            steps {
+                // Run vulnerability scanner
+                sh 'run_vulnerability_scanner.sh' // Command to run the scanner
+            }
+        }
     }
 }
